@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  /*overflow: scroll;*/
+}
+
+.color-border {
+  height: 30px;
+  width: 50px;
+  line-height: 30px;
+  border-radius: 4px;
+  background-color: rgb(215, 78, 81);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  /*font-style:;*/
+}
+
+.live-container {
+  background-color: rgb(246,248,250);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(246, 248, 250);
+  margin: 9px;
+  padding-bottom: 6px;
+}
+
+.heatmap-container {
+  font-size: x-large;
+  border-radius: 2px;
+  margin-left: 9px;
+  margin-right: 9px;
+  margin-top: 12px;
+  padding: 5px;
+  background-color: white;
+}
+
+.page-container {
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: auto;
+  max-width: 520px;
+  height: 100%;
+  font-size: 16px;
+  /*background-color: rebeccapurple;*/
+}
+
+.ant-comment {
+  background-color: white !important;
+}
+
+.tweet-container {
+  background-color: white !important;
+  padding-left: .6em;
+  padding-right: .6em;
+  /*border: .01em solid grey;*/
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+
+.comment-action {
+  padding-left: 8px;
+  cursor: auto;
+}
+
+[class*='-col-rtl'] .comment-action {
+  padding-right: 8px;
+  padding-left: 0;
+}
+
+.footer {
+  margin: auto;
+  text-align: center;
+  font-size: .8em;
+  padding-bottom: 10px;
+}
+
+.header {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.loading {
+  margin: auto;
+}
+
+
+.react-calendar-heatmap .color-scale-1 {
+  fill: rgb(248, 225, 225);
+}
+
+.react-calendar-heatmap .color-scale-2 {
+  fill: rgb(238, 179, 180);
+}
+
+.react-calendar-heatmap .color-scale-3 {
+  fill: rgb(232, 155, 157);
+}
+
+.react-calendar-heatmap .color-scale-4 {
+  fill: rgb(224, 118, 120);
+}
+
+.react-calendar-heatmap .color-scale-5 {
+  fill: rgb(221, 105, 108);
+}
+
+.react-calendar-heatmap .color-scale-6 {
+  fill: rgb(215, 78, 81);
+}
+
