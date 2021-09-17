@@ -50,6 +50,7 @@ serverURL:"https://your-api.address",
  | update| 所有用户 | 
  | find| 所有用户 | 
  | get| 所有用户 | 
+
 由于`likes`字段需要在前端更新，因此开放了 update 操作给所有用户，对其他字段的修改在下面限制。
 
 ##### 默认ACL权限
