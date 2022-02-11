@@ -8,6 +8,7 @@ import {LoadingOutlined} from "@ant-design/icons";
 import InfiniteScroll from 'react-infinite-scroller';
 import {FetchTweets} from "../services/fetch";
 import Config from "../conf"
+import GitHubButton from 'react-github-btn'
 
 const LIMIT = Config.paginate;
 
@@ -82,15 +83,15 @@ export default class Live extends React.Component {
                     <div className={"heatmap-container"}>
                         <Heatmap/>
                     </div>
-                    <div style={{overflow:'auto'}} ref={(ref)=>this.scrollParentRef = ref}>
+                    <div style={{overflow: 'auto'}} ref={(ref) => this.scrollParentRef = ref}>
                         <InfiniteScroll
-                                        //TODO [BUG] initialLoad 为 false 时，初始页面不满屏将无法触发后续加载
-                                        initialLoad={true}
-                                        pageStart={0}
-                                        loadMore={this.handleInfiniteOnLoad}
-                                        hasMore={!this.state.loading && this.state.hasMore}
-                                        useWindow={true}
-                                        getScrollParent={() => this.scrollParentRef}
+                            //TODO [BUG] initialLoad 为 false 时，初始页面不满屏将无法触发后续加载
+                            initialLoad={true}
+                            pageStart={0}
+                            loadMore={this.handleInfiniteOnLoad}
+                            hasMore={!this.state.loading && this.state.hasMore}
+                            useWindow={true}
+                            getScrollParent={() => this.scrollParentRef}
                         >
                             <div className={"content-container"}>
                                 {this.createTweets()}
@@ -105,6 +106,13 @@ export default class Live extends React.Component {
 
                     <div className={"footer"}>
                         {Config.footerText}
+                        <div hidden={!Config.showGithubStars} style={{marginTop: '10px'}}>
+                            <GitHubButton href="https://github.com/yuhangch/live"
+                                          data-color-scheme="no-preference: light; light: light; dark: dark;"
+                                          data-show-count="true"
+                                          aria-label="Star yuhangch/live on GitHub">Star</GitHubButton>
+                        </div>
+
                     </div>
                 </div>
             </div>
